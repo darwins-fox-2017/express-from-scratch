@@ -26,7 +26,7 @@
           <td><%= data[i].firstname %></td>
           <td><%= data[i].lastname %></td>
           <td><%= data[i].phone %></td>
-          <td><a href="/delete/<%= data[i].id %>"> Delete </a></td>
+          <td><a href="/delete/<%= data[i].id %>" onclick="return confirm('Anda yakin?')"> Delete </a></td>
           <td><a href="/update/<%= data[i].id %>"> Update </a></td>
         </tr>
       <% }%>
