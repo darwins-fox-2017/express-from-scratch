@@ -1,12 +1,11 @@
 'use strict'
 
 const express = require('express')
+let index = require('./routes/index')
 
 let app = express()
 
-app.get('/', function(request, response){
-  response.send("Hacktiv8 is Awesome coding bootcamp")
-})
+app.use('/', index);
 
 
 app.listen(4000)
