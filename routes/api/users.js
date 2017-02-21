@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-let db = require('../models')
+let db = require('../../models')
 
 router.get('/', function(request, response){
   db.User.findAll().then((users) => {
