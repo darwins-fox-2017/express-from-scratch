@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.14.1",
     "sequelize": "^3.30.2",
     "sequelize-cli": "^2.5.1",
