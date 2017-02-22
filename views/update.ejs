@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>User Data</title>
+</head>
+<body>
+  <h1>User Data</h1>
+  <form action="/doUpdate" method="post">
+    <br>
+    <input type="hidden" name="data_id" value="<%= data.id %>">
+    <label>Firstname: <input type="text" name="firstname" value="<%= data.firstname %>"><label>
+    <label>Lastname: <input type="text" name="lastname" value="<%= data.lastname %>"><label>
+    <label>Phone: <input type="text" name="phone" value="<%= data.phone %>"><label>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
