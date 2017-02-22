@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+   <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Phone</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+        </tr> 
+    </thead> 
+    <tbody>
+        <% for(let i=0;i<users.length;i++) { %>
+        <tr>
+            <td><%= users[i].id %></td>
+            <td><%= users[i].firstname %></td>
+            <td><%= users[i].lastname %></td>
+            <td><%= users[i].phone %></td>
+            <td><%= users[i].createdAt %></td>
+            <td><%= users[i].updatedAt %></td>
+            <td><a href="users/edituser/<%= users[i].id %>">Edit</a>|<a href="users/deleteuser/<%= users[i].id %>">Delete</a></td>
+        </tr>
+        <% } %>
+    </tbody>
+   </table> 
+   <a href="users/createuser">Add User</a>
+</body>
+</html>
