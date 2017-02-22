@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+  </head>
+  <body>
+    <form class="" action="/update" method="post">
+      <input type="hidden" name="id" value="<%= User.id %>">
+      <label>First Name : <input type="text" name="firstname" value="<%= User.firstname %>"></label><br>
+      <label>Last Name : <input type="text" name="lastname" value="<%= User.lastname %>"></label><br>
+      <label>Phone : <input type="text" name="phone" value="<%= User.phone %>"></label><br>
+      <input type="submit" value="Update aja">
+    </form>
+
+    </table>
+  </body>
+</html>
