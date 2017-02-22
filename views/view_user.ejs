@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Tampilkan user</title>
+</head>
+<style>
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }
+</style>
+<body>
+  <center>
+    <h1>User List</h1>
+  </center>
+    <a href="/user/new">NEW</a>
+    <center>
+    <table border="1" >
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% var count = 1 %>
+        <% users.forEach(function(user){ %>
+          <tr>
+            <td><%= count %></td>
+            <td><%= user.firstname %></td>
+            <td><%= user.lastname %></td>
+            <td><%= user.phone %></td>
+            <td><a href="/user/edit/<%= user.id %>">Edit</a> | <a href="/user/delete/<%= user.id %>">Delete</a></td>
+          </tr>
+          <% count++ %>
+        <% }); %>
+      </tbody>
+    </table>
+  </center>
+</body>
+</html>
