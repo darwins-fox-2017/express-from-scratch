@@ -49,7 +49,7 @@ router.put('/:id', function(req, res, next){
 })
 
 router.delete('/:id', function(req, res, next){
-  db.User.delete({
+  db.User.destroy({
     where: {
       id: req.params.id
     }
